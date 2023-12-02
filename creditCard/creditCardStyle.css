@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-container{
+    display: flex;
+}
+.data-container{
+    background-color: rgb(108,154,139);
+    width: 65%;
+    height: 100vh;
+}
+.order-container{
+    width: 35%;
+    height: 100vh;
+}
+.data-container h1{
+    text-align: center;
+    color: rgb(231,197,167);
+    margin-top: 50px;
+}
+.payment-announcement{
+    color: rgb(231, 197, 167);
+    margin-top: 8%;
+    margin-left: 10%;
+}
+.announcment-images{
+    margin-top: 2%;
+}
+.announcment-images img{
+    width: 90px;
+    height: 75px;
+}
