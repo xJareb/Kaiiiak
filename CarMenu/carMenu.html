@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="carMenuStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAIIAK</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="classType">
+                <select id="class">
+                <option value="">Klasa</option>
+                <option>Niska</option>
+                <option>Srednja</option>
+                <option>Premium</option>
+            </select>
+            </div>
+            <div class="fuelType">
+                <select id="fuel">
+                <option value="">Gorivo</option>
+                <option>Benzin</option>
+                <option>Dizel</option>
+                <option>Plin</option>
+            </select>
+            </div>
+            <div class="rangeSlider">
+                <p>Cjenovnik</p>
+                <div class="slider">
+                    <p class="startPrice">50KM</p>
+                    <input type="range" min="50" max="220" value="50" name="" id="sliderRange">
+                    <p class="endPrice">220KM</p>
+                </div>
+            </div>
+            <div class="user">
+                <p>User</p>
+                <div class="userImage">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="car-container">
+        <div class="car-list">
+        </div>
+    </div>
+    </div>
+    <script src="carMenuScript.js"></script>
+</body>
+</html>
