@@ -27,7 +27,7 @@ let dataLoad = () =>{
                             </div>
                             <div class="carPerInfo">
                                 <p>${x.price}KM/dan</p>
-                                <button onclick="showPaymentType(this); check(this)">Rezervisi</button>
+                                <button onclick="showPaymentType(this); check(this); handleData(this)">Rezervisi</button>
                             </div>
                             <div class="carDetails" onclick="showDetails(this)">
                                 <p>Detalji o automobilu</p>
@@ -57,6 +57,16 @@ let dataLoad = () =>{
 }
 dataLoad();
 
+function handleData(element) {
+    let parentElement = element.closest('.car');
+
+    let carImage = parentElement.querySelector('.carImage img').getAttribute('src');
+    let carTitle = parentElement.querySelector('.carTitle').innerText;
+    let carPerInfo = parentElement.querySelector('.carPerInfo p').innerText;
+    
+    localStorage.setItem('carTitle',carTitle);
+}
+
 function check (element){
     //implement later
     element.setAttribute('disabled','true');
@@ -66,7 +76,6 @@ let realBody = document.querySelector('body');
 let paymentBody = document.querySelector('.car-container');
 
 let showPaymentType = (element) =>{
-
 
     let paymentMethod = document.createElement('div');
     paymentMethod.innerHTML = `<div class="payment-container">
@@ -110,7 +119,7 @@ let goToNextPage = () =>{
     }
     if(checkedCreditCard === true)
     {
-        alert('Idi na novi page');
+        window.location.href='/creditCard/creditCard.html';
     }
 }
 
