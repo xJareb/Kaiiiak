@@ -1,0 +1,134 @@
+html{
+    margin: 0;
+    width:100%;
+    height:100%;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    margin: 0;
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mainspace{
+    background-color: #709b8b;
+    width:80%;
+    height:90%;
+    text-align: center;
+    border-radius: 14px;
+
+}
+.registracija{
+    text-align: center;
+    padding-top: 15px;
+}
+.registracijabtn{
+    text-align: center;
+    padding-top: 15px;
+}
+.inputs{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    text-align: center;
+}
+.personaldata{
+    width:50%
+}
+.adressdata{
+    width:50%
+}
+.inplbl{
+    text-align: left;
+    display:grid;
+    padding-left: 170px;
+    padding-top: 15px;
+}
+input{
+    width: 370px;
+    height:34px;
+    border-style: none;
+    border-radius: 8px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.comboboxGrad{
+    width: 370px;
+    height:34px;
+    border-style: none;
+    border-radius: 8px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.comboboxDrzava{
+    width: 370px;
+    height:34px;
+    border-style: none;
+    border-radius: 8px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.registracijatxt{
+    font-size: 55px;
+}
+.lblpersonaldata{
+    font-size:30px;
+    text-align: center;
+    padding-left: 35px;
+}
+.lbladressdata{
+    font-size:30px;
+    text-align: center;
+    padding-left: 175px;
+
+}
+.inputlabel{
+    font-size: 22px;
+}
+.datum{
+    width:170px
+}
+.cbrules{
+    width: 20px;
+}
+.chbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 145px;
+    padding-top: 15px;
+}
+.chtext{
+    font-size: 20px;
+    padding-left: 5px;
+    width:330px;
+    text-align: left;
+}
+.cbyears{
+    width: 20px;
+}
+.verticalline{
+    position: absolute;
+    left: 50%; /* Adjust the position as needed */
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid #eccdbc; /* Set the color and thickness of your line */
+    content: "";
+    margin-top: 170px;
+    height: 470px;
+}
+button{
+    margin-top: 15px;
+    width:290px;
+    height: 60px;
+    font-size: 20px;
+    color:white;
+    border-style: none;
+    border-radius: 7px;
+    background-color: #e8998d;
+}
+label{
+ color: #eccdbc;
+}
