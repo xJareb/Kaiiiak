@@ -1,0 +1,123 @@
+
+.lblPrijavise{
+    font-size: 65px;
+    text-align: center;
+    width:100%;
+}
+.page{
+    width:100%;
+    height:100%;
+    display: flex;
+}
+.registracija{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height:100%;
+}
+.prijava{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width: 50%;
+}
+body{
+    background-image: url(loginImages/login_bg.jpg);
+    background-size: cover;
+
+            background-position: center;
+
+            background-position-x: left;
+    height:100%;
+    margin:0;
+}
+html{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height:100%;
+    font-weight: lighter;
+}
+.KorisnickoIme{
+    display:flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.lblKorisnickoIme{
+    text-align: left;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 22px;
+
+}
+input{
+    width: 350px;
+    height:32px;
+    font-size: 20px;
+    border-style: none;
+    border-radius: 7px;
+}
+.Lozinka{
+    display:flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-top: 12px;
+}
+.lblLozinka{
+    font-size: 22px;
+    text-align: left;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.Registrujse{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    padding-left: 110px;
+
+}
+button{
+    color: white;
+    background-color: aquamarine;
+    border-style: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    width:170px;
+    height:45px;
+}
+.lblRegistracija{
+    font-size: 18px;
+}
+.Prijavisebtn{
+    padding-top: 33px;
+    text-align: center;
+}
+.Registrujsebtn{
+    padding-top: 24px;
+    text-align: center;
+}
+.Prijaviselbl{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.InputiLabeli{
+    padding-bottom: 10%;
+}
+.btnPrijavise{
+    font-size: 22px;
+    color: #ffffff;
+    background-color: #e8998d ;
+}
+label{
+    color: #f7ccb7;
+}
+.btnRegistracija{
+    background-color: #709b8b;
+    font-size: 20px;
+}
+.lblRegistracija{
+    font-size: 22px;
+    color:#e8998d
+}
