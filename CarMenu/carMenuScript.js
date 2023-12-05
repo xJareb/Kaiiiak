@@ -8,6 +8,7 @@ let randomUserName = () =>{
 let body = document.querySelector('.car-list');
 
 let dataLoad = () =>{
+
     fetch(`https://65665f6864fcff8d730ebcb1.mockapi.io/Cars`)
             .then(
                 r => {
@@ -179,3 +180,69 @@ priceSlider.addEventListener('change',()=>{
 })
 
 //filtering data
+
+function filterData() {
+    let dropDownListClass = document.getElementById('class');
+    let dropDownListFuel = document.getElementById('fuel');
+
+    let sliderPrice = document.querySelector('.slider input');
+    let maxPrice = 220;
+    console.log('Type of maxValue: ' + typeof(maxPrice));
+    let currentPrice = parseInt(sliderPrice.value);
+    console.log('Type of currentValue: ' + typeof(currentPrice));
+
+    body.innerHTML = ``;
+    fetch(`https://65665f6864fcff8d730ebcb1.mockapi.io/Cars`)
+            .then(
+                r => {
+                    if (r.status !== 200) {
+                        alert("Server javlja grešku: " + r.status);
+                        return;
+                    }
+
+                    r.json().then(obj => {
+                        for (const x of obj) {
+                            if((dropDownListClass.value === x.class && dropDownListFuel.value === x.fuel && x.price >= currentPrice) || 
+                            (dropDownListClass.value === x.class && dropDownListFuel.value === '' && x.price >=currentPrice) ||
+                            (dropDownListClass.value === '' && dropDownListFuel.value === x.fuel && x.price >=currentPrice) ||
+                            (dropDownListClass.value === '' && dropDownListFuel.value === '' && x.price >=currentPrice)
+                            )
+                            {
+                            body.innerHTML +=`<div class="car">
+                            <div class="carImage">
+                                <img src="${x.image}" alt="">
+                            </div>
+                            <div class="carTitle">
+                                <p>${x.name}</p>
+                            </div>
+                            <div class="carPerInfo">
+                                <p>${x.price}KM/dan</p>
+                                <button onclick="showPaymentType(this); check(this); handleData(this)">Rezervisi</button>
+                            </div>
+                            <div class="carDetails" onclick="showDetails(this)">
+                                <p>Detalji o automobilu</p>
+                            </div>
+                            <div class="detailsInfo">
+                                <div class="informations">
+                                    <p>Klasa: ${x.class}</p>
+                                    <p>Gorivo: ${x.fuel}</p>
+                                    <p>Broj vrata: ${x.doors}</p>
+                                </div>
+                                <div class="informations">
+                                    <p>Motor: ${x.engine} cm3</p>
+                                    <p>Snaga: ${x.power} KW</p>
+                                    <p>Godina: ${x.year}</p>
+                                </div>
+                            </div>
+                        </div>`
+                            }
+                        }
+                    });
+                }
+            )
+            .catch(
+                err => {
+                    alert("Error: " + err);
+                }
+            );
+}

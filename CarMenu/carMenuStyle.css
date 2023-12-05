@@ -111,6 +111,7 @@
     border-radius: 10px;
     background-color: rgb(232, 153, 141);
     color: #fbf7f4;
+    cursor: pointer;
 }
 .carDetails{
     margin-top: 30px;
