@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kaiiak</title>
+    <link rel="stylesheet" href="welcomeStyle.css">
 </head>
 <body>
+    <div class="navbar">
+        <div class="Logo">
+            <img class="logo" src=WelcomePhotos/logo.png></img>
+        </div>
+        <div class ="navbuttons">
+            <button class="btnLogin">Prijavi se</button>
+            <button class="btnRegister">Registruj se</button>
+        </div>
+        
+    </div>
+    <div class="mainpage">
+        <div class="podaci">
+            <div class="inplbl">
+                <label class="lblLokacija">Lokacija preuzimanja</label>
+                <select class="comboboxLokacija"></select>
+            </div>
+            <div class="Preuzimanje">
+                <div class="inplbl">
+                    <label class="lblDatumPreuzimanja">Datum preuzimanja</label>
+                    <input class="inpDatumPreuzimanja" type="date"></select>
+                </div>
+                <div class="inplbl">
+                    <label class="lblVrijemePreuzimanja">Vrijeme preuzimanja</label>
+                    <input class="inpVrijemePreuzimanja" type="time"></select>
+                </div>
+            </div>
+            <div class="Povratak">
+                <div class="inplbl">
+                    <label class="lblDatumPovratka">Datum povratka</label>
+                    <input class="inpDatumPovratka" type="date"></select>
+                </div>
+                <div class="inplbl">
+                    <label class="lblVrijemePovratka">Vrijeme povratka</label>
+                    <input class="inpVrijemePovratka" type="time"></select>
+                </div>
+            </div>
+            <div class="nextbtn">
+                <button class="btnNext">></button>
+            </div>
+        </div>
+    
+    </div>
     
 </body>
 </html>
