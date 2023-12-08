@@ -1,14 +1,30 @@
+function textStyle(element) {
+    element.style.fontSize = '1.5em';
+    element.style.textAlign = 'center';
+    element.style.marginTop = '10px';
+    element.style.marginBottom = '10px';
+}
+
 window.addEventListener('load',()=>{
 
     let carTitle = localStorage.getItem('carTitle');
 
+    let recieveDate = localStorage.getItem('recieveDate');
+    let recieveTime = localStorage.getItem('recieveTime');
+    
+    let returnDate = localStorage.getItem('returnDate');
+    let returnTime = localStorage.getItem('returnTime');
+
     let orderTitle = document.querySelector('.order-content .title');
     orderTitle.innerText = carTitle;
 
-    orderTitle.style.fontSize = '1.5em';
-    orderTitle.style.textAlign = 'center';
-    orderTitle.style.marginTop = '10px';
-    orderTitle.style.marginBottom = '10px';
+    let recievePeriod = document.querySelectorAll('.order-data p');
+    recievePeriod[0].innerText = recievePeriod[0].innerText + ' ' + recieveDate + ' ' + recieveTime;
+    recievePeriod[1].innerText = recievePeriod[1].innerText + ' ' + returnDate + ' ' + returnTime;
+
+
+    textStyle(orderTitle);
+    
 })
 
 let payButton = document.querySelector('.payment-announcement button');

@@ -28,7 +28,7 @@ let dataLoad = () =>{
                             </div>
                             <div class="carPerInfo">
                                 <p>${x.price}KM/dan</p>
-                                <button onclick="showPaymentType(this); check(this); handleData(this)">Rezervisi</button>
+                                <button onclick="showPaymentType(this);  handleData(this)">Rezervisi</button>
                             </div>
                             <div class="carDetails" onclick="showDetails(this)">
                                 <p>Detalji o automobilu</p>
@@ -68,16 +68,21 @@ function handleData(element) {
     localStorage.setItem('carTitle',carTitle);
 }
 
-function check (element){
+/*function check (element){
     //implement later
     element.setAttribute('disabled','true');
 }
+*/
 
 let realBody = document.querySelector('body');
 let paymentBody = document.querySelector('.car-container');
 
-let showPaymentType = (element) =>{
+let isOpened = false;
 
+let showPaymentType = (element) =>{
+    isOpened = !isOpened;
+    if(isOpened === true)
+    {
     let paymentMethod = document.createElement('div');
     paymentMethod.innerHTML = `<div class="payment-container">
     <h1>Odaberite nacin placanja</h1>
@@ -99,6 +104,7 @@ let showPaymentType = (element) =>{
     paymentBody.appendChild(paymentMethod);
     realBody.style.overflowY = 'hidden';
     userContainer.removeEventListener('click',pageEdit);
+    }
 }
 
 let goToNextPage = () =>{
@@ -129,6 +135,7 @@ let backToPage = () => {
     paymentContainer.remove();
     realBody.style.overflowY = 'scroll';
     userContainer.addEventListener('click',pageEdit);
+    isOpened = false;
 }
 
 let counter = 0;
@@ -165,7 +172,7 @@ randomUserName();
 let userContainer = document.querySelector('.user');
 
 let pageEdit = () =>{
-    alert('Idi na novi page');
+    window.location.href = '/EditProfile/editProfile.html';
 }
 
 userContainer.addEventListener('click',pageEdit);
