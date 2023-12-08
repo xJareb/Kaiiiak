@@ -63,6 +63,12 @@
     color: #fbf7f4;
     background-color: #e8998d;
     margin-left: 45vh;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.payment-announcement button:hover{
+    background-color: rgb(108,154,139);
+    border: 2px solid #e8998d;
 }
 .order-content{
     width: 85%;
