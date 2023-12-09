@@ -27,6 +27,8 @@ window.addEventListener('load',()=>{
     
 })
 
+let counterCorrectInputs = 0;
+
 let payButton = document.querySelector('.payment-announcement button');
 payButton.addEventListener('click',()=>{
     let inputs = document.querySelectorAll('.creditCard-data input');
@@ -43,44 +45,52 @@ payButton.addEventListener('click',()=>{
             if(splitValue.length === 2){
                 let stringSplitValue = JSON.stringify(splitValue);
                 if(stringSplitValue.match(numberRegex)){
-                    alert('Sadrzi broj');
+                    alert('Vase ime sadrzi brojeve, provjerite Vas unos');
                 }
+                counterCorrectInputs++;
             }
             else{
-                alert('Greska ime');
+                alert('Ime je obavezno, molimo Vas provjerite Vas unos');
             }
             break;
         case "creditCard":
             if(inputValue.length === 16){
                 if(inputValue.match(letterRegex)){
-                    alert('sadrzi slovo');
+                    alert('Vas broj kreditne kartice sadrzi slovo, provjerite Vas unos');
                 }
+                counterCorrectInputs++;
             }
             else{
-                alert('Greska kartica')
+                alert('Broj kreditne kartice je obavezan, molimo Vas provjerite unos')
             }
             break;
         case "endTime":
-                if(!inputValue === ''){
-
+                if(inputValue !== ""){
+                    counterCorrectInputs++;
                 }
                 else{
-                    alert('Greska datum kartica');
+                    alert('Datum isteka vase kreditne kartice je obavezan, molimo Vas provjerite unos');
                 }
+                console.log(inputValue);
+                console.log(typeof(inputValue));
             break;
         case "cvc":
             if(inputValue.length === 3){
                 if(inputValue.match(letterRegex)){
-                    alert('sadrzi slovo')
+                    alert('Vas CVC sadrzi slovo, molimo Vas provjerite unos')
                 }
+                counterCorrectInputs++;
             }
             else{
-                alert('Greska CVC');
+                alert('CVC je obavezan, molimo Vas provjerite unos');
             }
             break;
         default:
             break;
        }
     });
-    //later
+    if(counterCorrectInputs === 4){
+        window.location.href = '/Welcome/welcome.html';
+    }
+
 })

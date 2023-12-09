@@ -59,7 +59,8 @@
     border: 2px solid #eed2cc;
 }
 .control-data{
-    margin-top: calc(50% - 150px);
+    margin-top: calc(50% - 190px);
+    margin-left: -20px;
 }
 .personal-buttons p{
     font-size: 1.3em;
@@ -71,21 +72,28 @@
     display: flex;
     font-size: 1.7em;
 }
-.name-surname p{
-    margin-left: 15px;
-    margin-right: 5px;
+.personal-informations input{
+    border-radius: 10px;
+    border: none;
+    background-color: #6c9a8b;
+    padding: 10px;
+    color: #eed2cc;
+    font-size: 23px;
 }
 .info{
     display: flex;
+}
+.name-surname input{
+    font-size: 25px;
+    width: 150px;
 }
 .personal-info, .living-info{
     width: 50%;
     margin-left: 10px;
     font-size: 1.4em;
 }
-.name-surname p,.personal-info p,.living-info p{
-    padding: 5px;
-    color: #eed2cc;
+.living-info input{
+    margin-left: 20px;
 }
 .control-buttons{
     margin-top: calc(30% - 65px);
@@ -113,7 +121,7 @@
 }
 .lefthr, .righthr{
     height: 2px;
-    background-color: red;
+    background-color: grey;
     margin-top: 15px;
     width: 40%;
 }
