@@ -34,16 +34,16 @@
                     <input class="email">
                 </div>
                 <div class="inplbl">
-                    <label class="inputlabel">Lozinka:</label>
-                    <input class="lozinka">
+                    <label class="inputlabel" >Lozinka:</label>
+                    <input class="lozinka" type="password">
                 </div>
                 <div class="inplbl">
                     <label class="inputlabel">Potvrdite lozinku:</label>
-                    <input class="lozinka2">
+                    <input class="lozinka2" type="password">
                 </div>
             </div>
             <div class="verticalline"></div>
-            <div calss="adressdata">
+            <div class="adressdata">
                 <div class=adressdatalbl>
                     <label class="lbladressdata">Adresni podaci</label>
                 </div>
@@ -53,19 +53,26 @@
                 </div>
                 <div class="inplbl">
                     <label class="inputlabel">Broj telefona:</label>
-                    <input class="prezime">
+                    <input class="brojtelefona">
                 </div>
                 <div class="inplbl">
                     <label class="inputlabel">Drzava:</label>
-                    <select class="comboboxGrad"></select>
+                    <select class="comboboxDrzava">
+                        <option value="drz">Odaberi državu</option>
+                        <option value="Bosna i Hercegovina">Bosna i Hercegovina</option>
+                        <option value="Hrvatska">Hrvatska</option>
+
+                    </select>
                 </div>
                 <div class="inplbl">
                     <label class="inputlabel">Grad:</label>
-                    <select class="comboboxGrad"></select>
+                    <select class="comboboxGrad">
+                        <option value="grd">Odaberi grad</option>
+                    </select>
                 </div>
                 <div class="inplbl">
                     <label class="inputlabel">Broj vozačke dozvole:</label>
-                    <input class="adresa">
+                    <input class="brojvozacke">
                 </div>
 
                 <div class="chbox">
@@ -79,9 +86,10 @@
             </div>
         </div>
         <div class="registracijabtn">
-            <button class="btnRegistracija">Registruj se</button>
+            <button class="btnRegistracija" onclick="register()">Registruj se</button>
         </div>
     </div>
     
 </body>
+<script src="registerScript.js"></script>
 </html>
