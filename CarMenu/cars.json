@@ -1,0 +1,110 @@
+[
+        {
+          "image": "https://i.pinimg.com/originals/14/90/bb/1490bbf9c1991ca14e97082be5c31dfe.jpg",
+          "price": 80,
+          "class": "Niska",
+          "fuel": "Dizel",
+          "doors": 4,
+          "engine": 1.6,
+          "power": 77,
+          "year": "2010",
+          "name": "VW Polo 6R",
+          "id": "1"
+        },
+        {
+          "image": "https://car-images.bauersecure.com/wp-images/9815/01peugeot308.jpg",
+          "price": 90,
+          "class": "Niska",
+          "fuel": "Dizel",
+          "doors": 4,
+          "engine": 2,
+          "power": 100,
+          "year": "2011",
+          "name": "Peugeot 308",
+          "id": "2"
+        },
+        {
+          "image": "https://s1.cdn.autoevolution.com/images/gallery/AUDI-A6-5422_33.jpg",
+          "price": 140,
+          "class": "Premium",
+          "fuel": "Dizel",
+          "doors": 4,
+          "engine": 3,
+          "power": 170,
+          "year": "2016",
+          "name": "Audi A6",
+          "id": "3"
+        },
+        {
+          "image": "https://i.pinimg.com/736x/31/01/e2/3101e282e8c8df83b7a73717ade55be2.jpg",
+          "price": 100,
+          "class": "Srednja",
+          "fuel": "Benzin",
+          "doors": 4,
+          "engine": 1.8,
+          "power": 118,
+          "year": "2012",
+          "name": "Skoda Octavia A5",
+          "id": "4"
+        },
+        {
+          "image": "https://car-images.bauersecure.com/wp-images/1362/vwtouran06_1_560px.jpg",
+          "price": 70,
+          "class": "Srednja",
+          "fuel": "Dizel",
+          "doors": 4,
+          "engine": 2,
+          "power": 103,
+          "year": "2007",
+          "name": "VW Touran",
+          "id": "5"
+        },
+        {
+          "image": "https://media.istockphoto.com/id/1195554310/photo/bmw-5-series.jpg?s=612x612&w=0&k=20&c=AaZvbP7DmX_lfYmQfoVtXWHop1vgrQg0RsLgPrHFWT4=",
+          "price": 130,
+          "class": "Premium",
+          "fuel": "Dizel",
+          "doors": 4,
+          "engine": 3,
+          "power": 200,
+          "year": "2013",
+          "name": "BMW F10 530d",
+          "id": "6"
+        },
+        {
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt9C7QvQYKfUsjRm_JpnrQDD0urSoqnNeSREeO9gUsbA&s",
+          "price": 55,
+          "class": "Niska",
+          "fuel": "Plin",
+          "doors": 2,
+          "engine": 1.4,
+          "power": 55,
+          "year": "2009",
+          "name": "Fiat Grande Punto",
+          "id": "7"
+        },
+        {
+          "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Opel_Astra_H_%28Facelift%2C_2007%E2%80%932009%29_front_MJ.JPG",
+          "price": 60,
+          "class": "Niska",
+          "fuel": "Benzin",
+          "doors": 4,
+          "engine": 1.6,
+          "power": 81,
+          "year": "2008",
+          "name": "Opel Astra H",
+          "id": "8"
+        },
+        {
+          "image": "https://uploads.vw-mms.de/system/production/images/vwn/000/621/images/5a3b42b00729942133b2d7f9fe1e13c09389027c/DB2012AU00964_web_1600.jpg?1649144353",
+          "price": 90,
+          "class": "Golf 7",
+          "fuel": "Dizel",
+          "doors": 4,
+          "engine": 1.6,
+          "power": 81,
+          "year": "2014",
+          "name": "VW Golf 7",
+          "id": "9"
+        }
+]

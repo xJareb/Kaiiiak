@@ -9,7 +9,7 @@ let body = document.querySelector('.car-list');
 
 let dataLoad = () =>{
 
-    fetch(`https://65665f6864fcff8d730ebcb1.mockapi.io/Cars`)
+    fetch(`./cars.json`)
             .then(
                 r => {
                     if (r.status !== 200) {
@@ -57,7 +57,6 @@ let dataLoad = () =>{
             );
 }
 dataLoad();
-
 function handleData(element) {
     let parentElement = element.closest('.car');
 
@@ -68,18 +67,13 @@ function handleData(element) {
     localStorage.setItem('carTitle',carTitle);
 }
 
-/*function check (element){
-    //implement later
-    element.setAttribute('disabled','true');
-}
-*/
-
 let realBody = document.querySelector('body');
 let paymentBody = document.querySelector('.car-container');
 
 let isOpened = false;
 
 let showPaymentType = (element) =>{
+    console.log(element);
     isOpened = !isOpened;
     if(isOpened === true)
     {
@@ -188,6 +182,7 @@ priceSlider.addEventListener('change',()=>{
 
 //filtering data
 
+
 function filterData() {
     let dropDownListClass = document.getElementById('class');
     let dropDownListFuel = document.getElementById('fuel');
@@ -199,7 +194,7 @@ function filterData() {
     console.log('Type of currentValue: ' + typeof(currentPrice));
 
     body.innerHTML = ``;
-    fetch(`https://65665f6864fcff8d730ebcb1.mockapi.io/Cars`)
+    fetch(`./cars.json`)
             .then(
                 r => {
                     if (r.status !== 200) {
@@ -224,7 +219,7 @@ function filterData() {
                             </div>
                             <div class="carPerInfo">
                                 <p>${x.price}KM/dan</p>
-                                <button onclick="showPaymentType(this); check(this); handleData(this)">Rezervisi</button>
+                                <button onclick="showPaymentType(this); handleData(this)">Rezervisi</button>
                             </div>
                             <div class="carDetails" onclick="showDetails(this)">
                                 <p>Detalji o automobilu</p>
@@ -252,4 +247,5 @@ function filterData() {
                     alert("Error: " + err);
                 }
             );
+
 }
