@@ -14,7 +14,7 @@
                     <label class="lblPrijavise">Prijavi se</label>
                 </div>    
             <div class="KorisnickoIme">
-                    <label class="lblKorisnickoIme">Korisničko ime:</label>
+                    <label class="lblKorisnickoIme">E-mail:</label>
                     <input class="inpKorisnickoIme">
                 </div>
                 <div class="Lozinka">
@@ -22,7 +22,7 @@
                     <input type="password" class="inpLozinka">
                 </div>
                 <div class="Prijavisebtn">
-                    <button class="btnPrijavise">Prijavi se</button>
+                    <button class="btnPrijavise" onclick="login()">Prijavi se</button>
                 </div>
             </div>
 
@@ -31,11 +31,12 @@
             <div class="Registrujse">
             <label class="lblRegistracija">Nemate korisnički račun?</label>
             <div class="Registrujsebtn">
-                <button class="btnRegistracija">Registruj se</button>
+                <button class="btnRegistracija" onclick="goToRegister()">Registruj se</button>
             </div>
         </div>
          </div>
     </div>
 </body>
+<script src="loginScript.js"></script>
 
 </html>
