@@ -39,6 +39,10 @@
                     <div class="button-container">
                         <button class="button uredi">Uredi</button>
                     </div>
+                    <div class="button-container-controll">
+                        <button class="button list">Odustani</button>
+                        <button class="button list">Sacuvaj</button>
+                    </div>
                     
                 </div>
             </div>
@@ -46,9 +50,27 @@
                 
                 <div class="control-buttons">
                     <p>Email</p>
-                    <button class="button">Promjena lozinke</button>
-                    <button class="button">FAQ</button>
+                    <button class="button" id="changePassword">Promjena lozinke</button>
+                    <button class="button" id="FAQ">FAQ</button>
                     <button class="button">Obrisi nalog</button>
+                </div>
+                <div class="passwordC">
+                    <div class="current">
+                        <label for="currentPassword">Trenutna lozinka</label>
+                        <input type="text" id="currentPassword">
+                    </div>
+                    <div class="new">
+                        <label for="newPassword">Nova lozinka</label>
+                        <input type="password" id="newPassword">
+                    </div>
+                    <div class="new-match">
+                        <label for="matchNewPassword">Potvrdi lozinku</label>
+                        <input type="password" id="matchNewPassword">
+                    </div>
+                    <div class="passwordButton">
+                        <button class="button">Odustani</button>
+                        <button class="button">Sacuvaj</button>
+                    </div>
                 </div>
             </div>
         </div>

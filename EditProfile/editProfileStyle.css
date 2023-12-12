@@ -139,3 +139,36 @@ table{
     margin-right: auto;
     margin-top: 15px;
 }
+.button-container-controll{
+    display: none;
+    margin-left: 40%;
+}
+.list{
+    display: inline-block;
+    margin-right: 15px;
+}
+.passwordC{
+    display: none;
+}
+.current label, .new label, .new-match label{
+    display: block;
+    color:#eed2cc;
+    font-size: 1.3em;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.current input, .new input, .new-match input{
+    border-bottom: 1px solid #e8998d;
+    padding: 3px;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 0px;
+}
+.passwordButton button{
+    display: inline-block;
+    margin-right: 10px;
+}
+.passwordC{
+    margin-top: 10%;
+    margin-left: calc(50% - 160px);
+}

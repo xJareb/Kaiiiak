@@ -1,14 +1,41 @@
-let editPersonalData = document.querySelector('.personal-data');
-editPersonalData.addEventListener('click',()=>{
-    let allInputs = document.querySelectorAll('.control-data input');
-    allInputs.forEach(element => {
+let editButton = document.querySelector('.button-container button');
+let dataInputs = document.querySelectorAll('.control-data input');
+let controlButtons = document.querySelectorAll('.button-container-controll button');
+let controlDiv = document.querySelector('.button-container-controll');
+
+editButton.addEventListener('click',()=>{
+    dataInputs.forEach(element => {
         element.disabled = false;
     });
-    let buttonContainer = document.querySelector('.button-container');
-    buttonContainer.innerHTML = `<button class="discardChanges">Odustani</button><button>Sacuvaj</button>`;
+    editButton.style.display = 'none';
+    controlDiv.style.display = 'block';
 
-    /*let discardChanges = document.querySelector('.discardChanges');
-    discardChanges.addEventListener('click',()=>{
-        editPersonalData.removeEventListener('click');
-    })*/
+    controlButtons[0].addEventListener('click',()=>{
+        controlDiv.style.display = 'none';
+        editButton.style.display = 'block';
+        dataInputs.forEach(element => {
+            element.disabled = true;
+        });
+    })
+})
+
+let faqButton = document.getElementById('FAQ');
+faqButton.addEventListener('click',()=>{
+    window.location.href = "/Faq/faq.html";
+})
+
+let changePasswordButton = document.getElementById('changePassword');
+let personalButtonsDiv = document.querySelector('.control-buttons');
+let changePasswordDiv = document.querySelector('.passwordC');
+let discardChangesButton = document.querySelectorAll('.passwordButton button');
+
+changePasswordButton.addEventListener('click',()=>{
+    personalButtonsDiv.style.display = 'none';
+    changePasswordDiv.style.display = 'block';
+
+    discardChangesButton[0].addEventListener('click',()=>{
+        changePasswordDiv.style.display = 'none';
+        personalButtonsDiv.style.display = 'block';
+    })
+
 })
