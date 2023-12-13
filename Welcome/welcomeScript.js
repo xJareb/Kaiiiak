@@ -1,6 +1,8 @@
 let buttonNextPage = document.querySelector('.btnNext');
+
 buttonNextPage.addEventListener('click',()=>{
 
+    let recieveLocation = document.querySelector('.comboboxLokacija').value;
 
     let recieveDate = document.querySelector('.inpDatumPreuzimanja').value;
     let recieveTime = document.querySelector('.inpVrijemePreuzimanja').value;
@@ -26,7 +28,7 @@ buttonNextPage.addEventListener('click',()=>{
 
     
     
-    //localStorage.setItem('recieveLocation',recieveLocation);
+    localStorage.setItem('recieveLocation',recieveLocation);
 
     localStorage.setItem('recieveDate',recieveDate);
     localStorage.setItem('recieveTime',recieveTime);
@@ -37,4 +39,3 @@ buttonNextPage.addEventListener('click',()=>{
 
     window.location.href = '/CarMenu/carMenu.html';
 });
-

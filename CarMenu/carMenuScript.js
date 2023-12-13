@@ -63,8 +63,18 @@ function handleData(element) {
     let carImage = parentElement.querySelector('.carImage img').getAttribute('src');
     let carTitle = parentElement.querySelector('.carTitle').innerText;
     let carPerInfo = parentElement.querySelector('.carPerInfo p').innerText;
+    let username = document.querySelector('.user p').innerText;
+
+    let reservation ={
+        image: carImage,
+        title: carTitle,
+        info: carPerInfo,
+        user: username
+    }
+    console.log(JSON.stringify(reservation));
+    console.log(reservation);
+    localStorage.setItem("reservations",JSON.stringify(reservation));
     
-    localStorage.setItem('carTitle',carTitle);
 }
 
 let realBody = document.querySelector('body');
@@ -249,3 +259,11 @@ function filterData() {
             );
 
 }
+const getInfoLogged = localStorage.getItem("logged");
+
+if(getInfoLogged === "true"){
+    const loggedUsername = localStorage.getItem("loginUsername");
+    let userNameDiv = document.querySelector('.user p');
+    userNameDiv.innerText = loggedUsername;
+}
+
