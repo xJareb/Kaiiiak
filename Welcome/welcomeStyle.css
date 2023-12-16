@@ -114,10 +114,12 @@ label{
 }
 .btnLogin{
     background-color: #e8998d;
+    cursor: pointer;
 }
 .btnRegister{
     background-color: #6c9a8b;
     border:#e8998d 1px solid;
+    cursor: pointer;
 }
 .Logo{
     width: 350px;

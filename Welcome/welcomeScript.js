@@ -39,3 +39,38 @@ buttonNextPage.addEventListener('click',()=>{
 
     window.location.href = '/CarMenu/carMenu.html';
 });
+
+let loginButton = document.querySelector('.btnLogin');
+loginButton.addEventListener('click',()=>{
+    
+    if(firstLogged !== null)
+    {
+    if(firstLogged === "true")
+    {
+        window.location.href = "/Welcome/welcome.html";
+    }
+    else{
+        window.location.href = "/Login/login.html";
+    }
+    }
+    else{
+    window.location.href = "/Login/login.html";
+    }
+
+})
+let buttonRegister = document.querySelector('.btnRegister');
+buttonRegister.addEventListener('click',()=>{
+   if(firstLogged !== null)
+   {
+   if(firstLogged === "true")
+   {
+       window.location.href = "/Welcome/welcome.html";
+   }
+   else{
+       window.location.href = "/Register/register.html";
+   }
+   }
+   else{
+   window.location.href = "/Register/register.html";
+   }
+})

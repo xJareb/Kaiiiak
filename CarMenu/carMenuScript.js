@@ -1,3 +1,4 @@
+let isLogged = localStorage.getItem("logged");
 //generate random numbers for user who is not registred
 let randomUserName = () =>{
     let userName = document.querySelector('.user p');
@@ -122,15 +123,56 @@ let goToNextPage = () =>{
         checkedCash = true;
     }
     if(checkedCash === true){
-        alert('Uspjesna trgovina');
+        if(isLogged === "true"){
+            alert('Rezervacija uspjesno izvrsena');
+            let reservationData = localStorage.getItem("reservations");
+            let reservationDataTemp = JSON.parse(reservationData);
+
+            let newObj = {
+                foto: reservationDataTemp.image,
+                car: reservationDataTemp.title,
+                location: localStorage.getItem("recieveLocation"),
+                dater: localStorage.getItem("recieveDate"),
+                timer: localStorage.getItem("recieveTime"),
+                dateb: localStorage.getItem("returnDate"),
+                timeb: localStorage.getItem("returnTime"),
+                byuser: reservationDataTemp.user
+            }
+            fetch('https://65665f6864fcff8d730ebcb1.mockapi.io/Reservations', {
+        method: "POST",
+        body: JSON.stringify(newObj),
+        headers: {
+            "Content-Type": "application/json",
+        }
+    })
+        .then(r => {
+
+            r.json().then(t => {
+                window.location.href = '/Welcome/welcome.html';
+                localStorage.removeItem("reservations");
+                localStorage.removeItem("recieveLocation");
+                localStorage.removeItem("recieveDate");
+                localStorage.removeItem("recieveTime");
+                localStorage.removeItem("returnDate");
+                localStorage.removeItem("returnTime");
+            })
+
+        })
+        }
+        else{
+            window.location.href = "/orderNonReg/orderNonReg.html";
+        }
     }
-    
     if(creditCardPayment.checked === true){
         checkedCreditCard = true;
     }
-    if(checkedCreditCard === true)
-    {
-        window.location.href='/creditCard/creditCard.html';
+    if(checkedCreditCard === true){
+        if(isLogged === "true"){
+            window.location.href ="/creditCard/creditCard.html";
+        }
+        else{
+            window.location.href = "/orderNonReg/orderNonReg.html";
+        }
     }
 }
 
@@ -140,6 +182,7 @@ let backToPage = () => {
     realBody.style.overflowY = 'scroll';
     userContainer.addEventListener('click',pageEdit);
     isOpened = false;
+    localStorage.removeItem("reservations")
 }
 
 let counter = 0;
@@ -191,7 +234,6 @@ priceSlider.addEventListener('change',()=>{
 })
 
 //filtering data
-
 
 function filterData() {
     let dropDownListClass = document.getElementById('class');
@@ -266,4 +308,3 @@ if(getInfoLogged === "true"){
     let userNameDiv = document.querySelector('.user p');
     userNameDiv.innerText = loggedUsername;
 }
-

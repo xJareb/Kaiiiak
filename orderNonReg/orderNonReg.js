@@ -31,3 +31,14 @@ Grad.addEventListener('input', function () {
     }
     
 })
+let nextButton = document.querySelector('.Sadrzaj');
+nextButton.addEventListener('click',()=>{
+    alert('Rezervacija uspjesno izvrsena');
+    window.location.href="/Welcome/welcome.html";
+    localStorage.removeItem("reservations");
+    localStorage.removeItem("recieveLocation");
+    localStorage.removeItem("recieveDate");
+    localStorage.removeItem("recieveTime");
+    localStorage.removeItem("returnDate");
+    localStorage.removeItem("returnTime");
+})
