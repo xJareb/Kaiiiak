@@ -39,7 +39,7 @@ buttonNextPage.addEventListener('click',()=>{
 
     window.location.href = '/CarMenu/carMenu.html';
 });
-
+let firstLogged = localStorage.getItem("logged");
 let loginButton = document.querySelector('.btnLogin');
 loginButton.addEventListener('click',()=>{
     

@@ -172,6 +172,7 @@ let goToNextPage = () =>{
         }
         else{
             window.location.href = "/orderNonReg/orderNonReg.html";
+            localStorage.setItem("nonLogged",true);
         }
     }
 }

@@ -123,3 +123,18 @@ let loadPersonalInfo = () =>{
     }
 }
 loadPersonalInfo();
+
+let logout = document.querySelector('.position');
+logout.addEventListener('click',()=>{
+    if(isLogged === "true"){
+        localStorage.removeItem("loginUsername");
+        localStorage.removeItem("logged");
+        localStorage.removeItem("reservations");
+        localStorage.removeItem("recieveLocation");
+        localStorage.removeItem("recieveDate");
+        localStorage.removeItem("recieveTime");
+        localStorage.removeItem("returnDate");
+        localStorage.removeItem("returnTime");
+        window.location.href = "/Welcome/welcome.html";
+    }
+});
