@@ -3,6 +3,7 @@ body{
     align-items: center;
     background-repeat:no-repeat ;
     background-size: cover;
+    background-image: url(../orderNonReg/photo-1615715250780-46fb0cf2ec2c.jpg);
 }
 .sadrzajniDiv{
     margin-left: auto;
