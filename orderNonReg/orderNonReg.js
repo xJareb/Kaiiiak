@@ -1,52 +1,76 @@
-var Ime = document.getElementById('input1');
-var errorMessageIme = document.getElementById('error-message');
-var Prezime=document.getElementById('input2');
-var errorPrezimena=document.getElementById('errormessage');
-Ime.addEventListener('input', function () {
-  var regexIme = /^[A-Z][a-z]*$/;
+let counterCorrectInputs = 0;
+let nextButton = document.querySelector('.Sadrzaj button');
 
-  if (!regexIme.test(Ime.value) && Ime.value != "") {
-      alert('Nevalidan unos imena, pocnite velikim slovom bez brojeva.');
-      Ime.value="";
-  } 
-});
-
-Prezime.addEventListener('input', function () {
-    var regexPrezime = /^[A-Z][a-z]*$/;
-    if(!regexPrezime.test(Prezime.value) && Prezime.value != ""){
-        alert('Nevalidan unos prezimena, pocnite velikim slovom bez brojeva.');
-        Prezime.value="";
-    }
-    
-})
-
-
-var Grad = document.getElementById('input5');
-var errorMessageGrad = document.getElementById('error-messageGrad');
-Grad.addEventListener('input', function () {
-    var regexGrad = /^[A-Z][a-z]*$/;
-    if(!regexGrad.test(Grad.value) && Grad.value != ""){
-        alert('Nevalidan unos grada, pocnite velikim slovom bez brojeva.');
- Grad.value="";
-    }
-    
-})
-let nextButton = document.querySelector('.Sadrzaj');
 nextButton.addEventListener('click',()=>{
-    let cardNonLogged = localStorage.getItem("nonLogged");
-    if(cardNonLogged === "true")
-    {
-        window.location.href = "/creditCard/creditCard.html";
-        localStorage.removeItem("nonLogged");
-    }
-    else{
-        window.location.href = "/Welcome/welcome.html";
-        localStorage.removeItem("reservations");
-        localStorage.removeItem("recieveLocation");
-        localStorage.removeItem("recieveDate");
-        localStorage.removeItem("recieveTime");
-        localStorage.removeItem("returnDate");
-        localStorage.removeItem("returnTime");
-    }
-    
+    let inputs = document.querySelectorAll('.Sadrzaj input');
+    inputs.forEach(element=>{
+        let inputsName = element.getAttribute('name');
+        let inputValue = element.value;
+
+        //regex validation patterns
+        var regexNotNumber = /^[A-Z][a-z]*$/;
+        var regexPhoneNumber = /^[0-9]{3}[0-9]{3}[0-9]{3,4}$/;
+        
+        switch (inputsName) {
+            case "input1":
+                if(!regexNotNumber.test(inputValue) || inputValue === ""){
+                    alert('Nevalidan unos imena, pocnite velikim slovom bez brojeva.');
+                }
+                else{
+                    counterCorrectInputs++;
+                }
+                break;
+            case "input2":
+                if(!regexNotNumber.test(inputValue) || inputValue === ""){
+                    alert('Nevalidan unos prezimena, pocnite velikim slovom bez brojeva.');
+                }
+                else{
+                    counterCorrectInputs++;
+                }
+                break;
+            case "input3":
+                if(!regexPhoneNumber.test(inputValue) || inputValue === ""){
+                    alert('Nevalidan unos broja telefona.');
+                }
+                else{
+                    counterCorrectInputs++;
+                }
+            case "input4":
+                if(inputValue === ""){
+                    alert('Nevalidan unos broja vozacke dozvole.');
+                }
+                else{
+                    counterCorrectInputs++;
+                }
+                break;
+            case "input5":
+                if(!regexNotNumber.test(inputValue) || inputValue === ""){
+                    alert('Nevalidan unos grada, pocnite velikim slovom bez brojeva.');
+                }
+                else{
+                    counterCorrectInputs++;
+                }
+                break;
+            default:
+                break;
+        }
+        if(counterCorrectInputs === 5)
+        {
+            let cardNonLogged = localStorage.getItem("nonLogged");
+            if(cardNonLogged === "true")
+            {
+                window.location.href = "/creditCard/creditCard.html";
+                localStorage.removeItem("nonLogged");
+            }
+            else{
+                window.location.href = "/Welcome/welcome.html";
+                localStorage.removeItem("reservations");
+                localStorage.removeItem("recieveLocation");
+                localStorage.removeItem("recieveDate");
+                localStorage.removeItem("recieveTime");
+                localStorage.removeItem("returnDate");
+                localStorage.removeItem("returnTime");
+            }
+        }
+    })
 })
