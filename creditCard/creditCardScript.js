@@ -13,7 +13,9 @@ let recieveTime = localStorage.getItem('recieveTime');
 let returnDate = localStorage.getItem('returnDate');
 let returnTime = localStorage.getItem('returnTime');
 let user = localStorage.getItem("loginUsername");
-
+let daysDiff = localStorage.getItem('daysDiff');
+let isLogged = localStorage.getItem('logged');
+console.log(isLogged);
 window.addEventListener('load',()=>{
 
     let image = document.querySelector('.images img');
@@ -34,7 +36,15 @@ window.addEventListener('load',()=>{
     let numberPrice = parseInt(price.substring(0,price.indexOf('K')));
 
     let total = document.querySelector('.order-total p');
-    total.innerText +=' ' + numberPrice.toString() + 'KM';
+    let priceDiv = document.querySelectorAll('.order-price p');
+    if(isLogged === "true"){
+        total.innerText +=' ' + numberPrice.toString()*daysDiff*0.9 + 'KM';
+        priceDiv[0].innerText += `10%`
+        priceDiv[1].innerText += ' ' + numberPrice.toString()*daysDiff*0.9 + 'KM';
+    }
+    else{
+        total.innerText +=' ' + numberPrice.toString()*daysDiff + 'KM';
+    }
 })
 
 let counterCorrectInputs = 0;
@@ -81,8 +91,6 @@ payButton.addEventListener('click',()=>{
                 else{
                     alert('Datum isteka vase kreditne kartice je obavezan, molimo Vas provjerite unos');
                 }
-                console.log(inputValue);
-                console.log(typeof(inputValue));
             break;
         case "cvc":
             if(inputValue.length === 3){
@@ -102,6 +110,9 @@ payButton.addEventListener('click',()=>{
     if(counterCorrectInputs === 4){
 
         postMethod();
+    }
+    else{
+        counterCorrectInputs = 0;
     }
 
 })

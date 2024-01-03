@@ -13,9 +13,11 @@
                 <div class="control-image">
                     <div class="image">
                         <img src="/EditProfile/editProfileImages/585e4bf3cb11b227491c339a.png" alt="">
+                        
                     </div>
                     <p>Korisnicko ime</p>
-                    <button class="button">Dodaj fotografiju</button>
+                    <label class="button" for="input-file">Dodaj fotografiju</label>
+                    <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
                 </div>
             </div>
             <div class="personal-data">
@@ -50,7 +52,7 @@
                 <div class="passwordC">
                     <div class="current">
                         <label for="currentPassword">Trenutna lozinka</label>
-                        <input type="text" id="currentPassword">
+                        <input type="password" id="currentPassword">
                     </div>
                     <div class="new">
                         <label for="newPassword">Nova lozinka</label>

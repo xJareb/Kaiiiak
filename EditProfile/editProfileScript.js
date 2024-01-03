@@ -138,3 +138,32 @@ logout.addEventListener('click',()=>{
         window.location.href = "/Welcome/welcome.html";
     }
 });
+
+let profilePicture = document.querySelector('.image img');
+let inputFile = document.querySelector('.control-image input');
+let savePassword = document.querySelectorAll('.passwordButton button');
+
+if(isLogged === "true"){
+    inputFile.onchange = function(){
+        profilePicture.src = URL.createObjectURL(inputFile.files[0]);
+    }
+    let currentPassword = document.querySelector('.current input');
+    let newPassword = document.querySelector('.new input');
+    let newMatchPassword = document.querySelector('.new-match input');
+    savePassword[1].onclick = function(){
+        if(currentPassword !== ""){
+            if(newPassword.value === newMatchPassword.value){
+                alert('Uspjesno izmjenjena lozinka');
+            }
+            else{
+                alert('Nova lozinka se ne poklapa');
+            }
+        }
+        else{
+            alert('Trenutna lozinka nije ispravna');
+        }
+    }
+    
+}
+
+

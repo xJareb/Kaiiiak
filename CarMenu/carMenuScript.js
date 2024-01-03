@@ -72,8 +72,6 @@ function handleData(element) {
         info: carPerInfo,
         user: username
     }
-    console.log(JSON.stringify(reservation));
-    console.log(reservation);
     localStorage.setItem("reservations",JSON.stringify(reservation));
     
 }
@@ -84,7 +82,6 @@ let paymentBody = document.querySelector('.car-container');
 let isOpened = false;
 
 let showPaymentType = (element) =>{
-    console.log(element);
     isOpened = !isOpened;
     if(isOpened === true)
     {
@@ -242,9 +239,7 @@ function filterData() {
 
     let sliderPrice = document.querySelector('.slider input');
     let maxPrice = 220;
-    console.log('Type of maxValue: ' + typeof(maxPrice));
     let currentPrice = parseInt(sliderPrice.value);
-    console.log('Type of currentValue: ' + typeof(currentPrice));
 
     body.innerHTML = ``;
     fetch(`./cars.json`)

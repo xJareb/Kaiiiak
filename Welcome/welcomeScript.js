@@ -26,7 +26,10 @@ buttonNextPage.addEventListener('click',()=>{
     
         // If the control reaches here, the dates are valid
 
-    
+        let timeDiff= Math.abs(datumPreuzimanja.getTime() - datumPovratka.getTime());
+        let daysDiff =Math.floor(timeDiff/(1000*3600*24));
+
+    localStorage.setItem('daysDiff',daysDiff);
     
     localStorage.setItem('recieveLocation',recieveLocation);
 

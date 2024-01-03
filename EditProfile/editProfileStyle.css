@@ -146,6 +146,9 @@ table{
     display: none;
     margin-left: 40%;
 }
+.control-image input{
+    display: none;
+}
 .list{
     display: inline-block;
     margin-right: 15px;
