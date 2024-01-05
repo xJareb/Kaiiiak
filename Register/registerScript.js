@@ -56,10 +56,12 @@ function register(){
         }
         return response.json();
       })
-      .then(data => {
+      .then(data => {          
+        localStorage.setItem("loginUsername",ime.toLowerCase() + "." + prezime.toLowerCase());
+        localStorage.setItem("logged",true);
+        localStorage.setItem("slika","https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg");
         alert("Registracija uspješna")
-        console.log('Server response:', data);
-        window.location.href = '/CarMenu/carMenu.html';
+        window.location.href = '/Welcome/welcome.html';
       })
       .catch(error => {
         console.error('Error during fetch:', error);

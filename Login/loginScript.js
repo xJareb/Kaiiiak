@@ -25,9 +25,10 @@ function login(){
                 {
                     localStorage.setItem("loginUsername",x.KorisnickoIme);
                     localStorage.setItem("logged",true);
+                    localStorage.setItem("slika",x.Slika);
                 }
             }
-            userFound ? window.location.href = '/Welcome/welcome.html' : alert("Unešeni podaci za prijavu nisu tačni");
+            userFound ? window.location.href = '/Welcome/welcome.html' : alert("Uneseni podaci za prijavu nisu tačni");
         })
         .catch(error => {
             console.error('Error during fetch:', error);

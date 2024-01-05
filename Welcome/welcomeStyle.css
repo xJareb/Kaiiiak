@@ -17,13 +17,13 @@ body{
     width:100%;
     height: 15%;
     text-align: right;
-    display:flex;
+    display: flex;
     flex-direction: row;
 }
 .mainpage{
     width:100%;
     margin-top: 40px;
-    height:80%;
+    height:79%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,17 +31,15 @@ body{
 .navbuttons{
     width:50%;
     padding-top: 0px;
-    padding-left: 700px;
-    display: flex;
-  justify-content: center;
-  align-items: center;
+    padding-left: 40%;
+
 }
 button{
     margin-left: 20px;
     padding-left: 10px;
     margin-top: 15px;
-    width:200px;
-    height: 50px;
+    width:180px;
+    height: 45px;
     font-size: 20px;
     color:white;
     border-style: none;
@@ -50,30 +48,34 @@ button{
 }
 .podaci{
     border-radius: 15px;
-    display:flex;
+    display:block;
     padding-top: 40px;
     padding-left: 7%;
-    flex-direction: column;
-    width: 45%;
+    text-align:center ;
+    width: 50%;
     height: 55%;
 background-color: #6c9a8b;
 }
 .comboboxLokacija{
-    width: 600px;
+    width: 550px;
     height:38px;
     border-style: none;
     border-radius: 8px;
     font-size: 20px;
     margin-top: 5px;
 }
+.inputi{
+    position: relative;
+    left: 30px;
+}
 .inplbl{
     text-align: left;
     display:grid;
-    padding-left: 20px;
     padding-top: 15px;
+    padding-left: 5px;
 }
 input{
-    width: 240px;
+    width: 200px;
     height:38px;
     border-style: none;
     border-radius: 8px;
@@ -108,18 +110,35 @@ label{
     font-size: 70px;
     font-weight: bold;
 }
+.btnNext:hover{
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
 .nextbtn{
+    position: relative;
     text-align: right;
-    padding-right: 145px;
+    width:90px;
+    right: -75%;
+    bottom: 160px;
 }
 .btnLogin{
     background-color: #e8998d;
     cursor: pointer;
+    transition: 0.5s;
+}
+.btnLogin:hover{
+    background-color: #6c9a8b;
+    border: 2px solid #e8998d;
 }
 .btnRegister{
     background-color: #6c9a8b;
     border:#e8998d 1px solid;
     cursor: pointer;
+    transition: 0.5s;
+}
+.btnRegister:hover{
+    background-color: #e8998d;
+    border: 2px solid #ebcfca;
+    
 }
 .Logo{
     width: 350px;
@@ -131,4 +150,35 @@ label{
 .logo{
     width:350px;
     height:350px;
+}
+.korisnicko-ime{
+    margin-left: 200px;
+}
+.slika-wrapper{
+    margin-left: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid rgb(108, 105, 105);
+}
+.profilna{
+    overflow: hidden;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.profilna:hover{
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+.logiran-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}	
+.unlogiran-nav{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }

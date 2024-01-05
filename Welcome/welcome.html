@@ -12,13 +12,22 @@
             <img class="logo" src=WelcomePhotos/logo.png></img>
         </div>
         <div class ="navbuttons">
-            <button class="btnLogin">Prijavi se</button>
-            <button class="btnRegister">Registruj se</button>
+            <div class="logiran-nav">
+                <label onclick="goprofil()" class="korisnicko-ime" id="korisnicko-ime">korisnik.logirani</label>
+                <div class="slika-wrapper">
+                    <img onclick="goprofil()" class="profilna" src="https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg">
+                </div>
+            </div>
+            <div class="unlogiran-nav">
+                <button class="btnLogin" onclick="goPrijavise()">Prijavi se</button>
+                <button class="btnRegister" onclick="goRegistrujse()">Registruj se</button>
+            </div>
         </div>
         
     </div>
     <div class="mainpage">
         <div class="podaci">
+            <div class="inputi">
             <div class="inplbl">
                 <label class="lblLokacija">Lokacija preuzimanja</label>
                 <select class="comboboxLokacija">
@@ -48,6 +57,7 @@
             </div>
             <div class="nextbtn">
                 <button class="btnNext">></button>
+            </div>
             </div>
         </div>
     

@@ -21,71 +21,75 @@ body{
 
 }
 .registracija{
+    padding-top: 5px;
     text-align: center;
-    padding-top: 15px;
+
 }
 .registracijabtn{
     text-align: center;
-    padding-top: 15px;
 }
 .inputs{
     display: flex;
     flex-direction: row;
-    width: 95%;
+    width: 90%;
+    height: 80%;
+    margin-left: 25px;
     text-align: center;
 }
 .personaldata{
-    width:50%
+    width:50%;
+    padding-top:30px;
 }
 .adressdata{
-    width:50%
+    width:50%;
+    padding-top:30px;
 }
 .inplbl{
     text-align: left;
     display:grid;
-    padding-left: 170px;
-    padding-top: 15px;
+    padding-left: 140px;
+    padding-top: 10px;
 }
 input{
-    width: 370px;
-    height:34px;
+    width: 340px;
+    height:30px;
     border-style: none;
     border-radius: 8px;
     font-size: 20px;
     margin-top: 5px;
 }
 .comboboxGrad{
-    width: 370px;
-    height:34px;
+    width: 340px;
+    height:30px;
     border-style: none;
     border-radius: 8px;
     font-size: 20px;
     margin-top: 5px;
 }
 .comboboxDrzava{
-    width: 370px;
-    height:34px;
+    width: 340px;
+    height:30px;
     border-style: none;
     border-radius: 8px;
     font-size: 20px;
     margin-top: 5px;
 }
 .registracijatxt{
-    font-size: 55px;
+    font-size: 35px;
 }
 .lblpersonaldata{
-    font-size:30px;
+    font-size:25px;
     text-align: center;
     padding-left: 35px;
 }
 .lbladressdata{
-    font-size:30px;
+    font-size:25px;
     text-align: center;
     padding-left: 175px;
 
 }
 .inputlabel{
-    font-size: 22px;
+    font-size: 20px;
 }
 .datum{
     width:170px
@@ -97,7 +101,7 @@ input{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 145px;
+    padding-left: 95px;
     padding-top: 15px;
 }
 .chtext{
@@ -112,7 +116,7 @@ input{
 .verticalline{
     position: absolute;
     left: 50%; /* Adjust the position as needed */
-    top: 0;
+    top: -7%;
     bottom: 0;
     border-left: 1px solid #eccdbc; /* Set the color and thickness of your line */
     content: "";
@@ -128,6 +132,13 @@ button{
     border-style: none;
     border-radius: 7px;
     background-color: #e8998d;
+    transition: 0.5s;
+    font-weight: bold;
+}
+button:hover{
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+        background-color: #6c9a8b;
+        border: 2px solid #e8998d;
 }
 label{
  color: #eccdbc;

@@ -109,6 +109,11 @@ button{
     font-size: 22px;
     color: #ffffff;
     background-color: #e8998d ;
+    transition: 0.5s ease;
+}
+.btnPrijavise:hover{
+    background-color: #6c9a8b;
+    border: 2px solid #e8998d;
 }
 label{
     color: #f7ccb7;
@@ -116,7 +121,13 @@ label{
 .btnRegistracija{
     background-color: #709b8b;
     font-size: 20px;
+    transition: 0.5s ease;
 }
+.btnRegistracija:hover{
+    background-color: #ffffff;
+    border: 2px solid #6c9a8b;
+    color:#6c9a8b
+};
 .lblRegistracija{
     font-size: 22px;
     color:#e8998d
